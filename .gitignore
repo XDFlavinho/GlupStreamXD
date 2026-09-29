@@ -1,0 +1,30 @@
+node_modules/
+dist/
+build/
+out/
+*.log
+
+# Variáveis de ambiente / segredos
+.env
+.env.*
+!.env.example
+
+# Chaves e certificados
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+
+# IDE / sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

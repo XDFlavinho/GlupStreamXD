@@ -1,0 +1,67 @@
+{
+  "name": "glupstreamxd",
+  "version": "2.0.1",
+  "description": "Chat, figurinhas e tela para até 10 espectadores",
+  "main": "main.js",
+  "author": "GlupStreamXD",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/*.test.cjs",
+    "test:desktop": "node tests/group.cjs",
+    "build": "electron-builder --win nsis --x64",
+    "build:portable": "electron-builder --win portable --x64",
+    "test:stickers": "node tests/sticker-regression.cjs"
+  },
+  "dependencies": {
+    "peerjs": "1.5.5",
+    "lucide": "1.48.0"
+  },
+  "devDependencies": {
+    "electron": "44.4.5",
+    "electron-builder": "26.15.3",
+    "playwright": "1.58.2"
+  },
+  "build": {
+    "appId": "com.glupstreamxd.app",
+    "productName": "GlupStreamXD",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "android/GlupStreamXD-Android-2.0.1.apk",
+        "to": "GlupStreamXD-Android.apk"
+      }
+    ],
+    "protocols": [
+      {
+        "name": "Convite GlupStreamXD",
+        "schemes": [
+          "glupstreamxd"
+        ]
+      }
+    ],
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        "nsis"
+      ],
+      "signExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    },
+    "artifactName": "${productName}-${version}-${arch}-Setup.${ext}"
+  }
+}
