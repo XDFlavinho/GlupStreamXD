@@ -1,0 +1,9 @@
+{
+  "name": "glupstreamxd-android",
+  "version": "2.0.1",
+  "private": true,
+  "description": "Cliente Android de chat e recepção de tela do GlupStreamXD Windows",
+  "scripts": { "test:interop": "node tests/interop.cjs" },
+  "devDependencies": { "playwright": "1.58.2" }
+}
+
