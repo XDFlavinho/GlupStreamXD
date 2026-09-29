@@ -1,4 +1,4 @@
-# GlupStreamXD 2.0.1 — Windows e Android
+# GlupStreamXD 2.1.1 — Windows e Android
 
 Chat com perfis e figurinhas, compartilhamento de tela para **até 10 espectadores além do host**, ajuda, apoio e estatísticas. Electron + HTML/CSS/JavaScript puro + PeerJS. Sem cadastro ou servidor dedicado próprio.
 
